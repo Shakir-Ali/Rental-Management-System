@@ -13,7 +13,6 @@ public class PropertyController {
 
     @GetMapping("/addProperty")
     public String addProperty() {
-        propertyService.addProperty();
         return "Add Property Endpoint";
     }
 }

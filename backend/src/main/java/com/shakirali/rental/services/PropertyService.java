@@ -5,18 +5,34 @@ import com.shakirali.rental.repository.PropertyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PropertyService {
     @Autowired
     private PropertyRepository propertyRepository;
 
-    public void addProperty() {
-        Property property = new Property();
-        property.setName("Underground");
-        property.setType("SHOPS");
-        property.setMonthlyRent(40000);
-        property.setDueDay(1);
-
-        propertyRepository.save(property);
+    public Property addProperty(Property property) {
+        validateProperty(property);
+        return propertyRepository.save(property);
     }
+
+    public Property fetchProperty(Long id, String name) {
+        return propertyRepository.findByIdAndName(id, name).orElseThrow(() -> new RuntimeException("Property not found"));
+    }
+
+    public List<Property> getAllProperties() {
+        return propertyRepository.findAll();
+    }
+
+    private void validateProperty(Property property) {
+        if (property.getMonthlyRent() <= 0) {
+            throw new IllegalArgumentException("Monthly rent must be greater than zero.");
+        }
+        if (property.getDueDay() < 1 || property.getDueDay() > 31) {
+            throw new IllegalArgumentException("Due day must be between 1 and 31.");
+        }
+    }
+
+
 }
