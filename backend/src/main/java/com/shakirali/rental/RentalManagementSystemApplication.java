@@ -1,5 +1,8 @@
 package com.shakirali.rental;
 
+import com.shakirali.rental.entity.Property;
+import com.shakirali.rental.repository.PropertyRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
