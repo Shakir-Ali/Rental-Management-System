@@ -10,24 +10,14 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
-@Table(
-        name = "rents",
-uniqueConstraints = @UniqueConstraint(columnNames = {"tenant_id", "month", "year"}))
-public class RentDeposit {
+@Table(name = "transactions")
+public class Transactions {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private long id;
-
     @ManyToOne
     private Tenant tenant;
-
     private double amount;
-
-    @Enumerated(EnumType.STRING)
-    private RentStatus status;
-
     private LocalDate paymentDate;
-
-
 }

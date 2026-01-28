@@ -1,6 +1,7 @@
 package com.shakirali.rental.entity;
 
 import com.shakirali.rental.beans.Properties;
+import com.shakirali.rental.beans.RentStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,18 +14,19 @@ import java.time.LocalDate;
 @Table(name = "tenants")
 public class Tenant {
 
-    @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private long id;
-    @Id
-    private String name;
-    private int mobileNo;
+    @EmbeddedId
+    private TenantId id;
 
+    @Enumerated(EnumType.STRING)
     private Properties property;
+    @Enumerated(EnumType.STRING)
+    private RentStatus status;
     private String notes;
 
     private LocalDate dateOfStart;
     private Double startingRent;
     private Double currentRent;
+    private Double remainingRent;
 
+    private LocalDate lastUpdated;
 }
