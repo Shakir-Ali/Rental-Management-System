@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Table(
         name = "rents",
 uniqueConstraints = @UniqueConstraint(columnNames = {"tenant_id", "month", "year"}))
-public class Rent {
+public class RentDeposit {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
@@ -21,9 +21,6 @@ public class Rent {
 
     @ManyToOne
     private Tenant tenant;
-
-    private int month;
-    private int year;
 
     private double amount;
 
