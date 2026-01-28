@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class TenantService {
@@ -13,9 +14,9 @@ public class TenantService {
     @Autowired
     private TenantRepository tenantRepository;
 
-    public void addTenant(Tenant tenant){
+    public Tenant addTenant(Tenant tenant){
         validations(tenant);
-        tenantRepository.save(tenant);
+        return tenantRepository.save(tenant);
     }
 
     private void validations(Tenant tenant) {
@@ -45,12 +46,20 @@ public class TenantService {
         tenant.setLastUpdated(LocalDate.now());
     }
 
-    public void removeTenant(String name, String mobileNo){
+    public Tenant removeTenant(String name, String mobileNo) {
         Tenant tenant = tenantRepository.findByNameAndMobile_No(name, mobileNo);
-        if(tenant == null){
+        if (tenant == null) {
             throw new IllegalArgumentException("Tenant does not exist");
         }
         tenantRepository.delete(tenant);
+        return tenant;
     }
+
+    public List<Tenant> getAllTenants(){
+        List<Tenant> tenants = tenantRepository.findAll();
+        return tenants;
+    }
+
+
 
 }
