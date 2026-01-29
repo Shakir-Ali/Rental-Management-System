@@ -1,8 +1,10 @@
 package com.shakirali.rental.services.impl;
 
+import com.shakirali.rental.beans.TenantStatus;
 import com.shakirali.rental.entity.Tenant;
 import com.shakirali.rental.repository.TenantRepository;
 import com.shakirali.rental.services.TenantService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +12,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Service
+@Slf4j
 public class TenantServiceImpl implements TenantService {
 
     @Autowired
@@ -46,6 +49,8 @@ public class TenantServiceImpl implements TenantService {
         }
         // Setting Last Updated Date
         tenant.setLastUpdated(LocalDate.now());
+        tenant.setRemainingRent(0.0);
+        tenant.setTenantStatus(TenantStatus.ACTIVE);
     }
 
     @Override
@@ -62,6 +67,30 @@ public class TenantServiceImpl implements TenantService {
     public List<Tenant> getAllTenants(){
         List<Tenant> tenants = tenantRepository.findAll();
         return tenants;
+    }
+
+    @Override
+    public Tenant addMonthlyRent(Tenant tenant) {
+        log.info("Adding Monthly Rent");
+
+        tenant.setRemainingRent(tenant.getRemainingRent() + tenant.getCurrentRent());
+        tenant = tenantRepository.save(tenant);
+
+        log.info("Monthly Rent Added");
+
+        return tenant;
+    }
+
+    @Override
+    public Tenant addYearlyRent(Tenant tenant) {
+        log.info("Adding Yearly Rent");
+
+        tenant.setCurrentRent(tenant.getCurrentRent() + (tenant.getCurrentRent() * 0.05));
+        tenant = tenantRepository.save(tenant);
+
+        log.info("Yearly Rent Added");
+
+        return tenant;
     }
 
 }

@@ -45,7 +45,7 @@ public class TenantController {
         tenant.getId().setName("Shakir");
         tenant.getId().setMobileNo("1234567890");
         tenant.setProperty(Properties.FAZAL_PLAZA);
-        tenant.setStatus(RentStatus.PAID);
+        tenant.setRentStatus(RentStatus.PAID);
         tenant.setLastUpdated(LocalDate.now());
         tenant.setStartingRent(4500.0);
         tenant.setDateOfStart(LocalDate.now());

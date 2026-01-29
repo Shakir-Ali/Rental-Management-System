@@ -6,8 +6,10 @@ import java.util.List;
 
 public interface TenantService {
 
-    public Tenant addTenant(Tenant tenant);
-    public Tenant removeTenant(String name, String mobileNo);
-    public List<Tenant> getAllTenants();
+    Tenant addTenant(Tenant tenant);
+    Tenant removeTenant(String name, String mobileNo);
+    List<Tenant> getAllTenants();
+    Tenant addMonthlyRent(Tenant tenant);
+    Tenant addYearlyRent(Tenant tenant);
 
 }

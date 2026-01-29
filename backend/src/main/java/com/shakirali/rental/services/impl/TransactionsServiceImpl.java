@@ -63,9 +63,9 @@ public class TransactionsServiceImpl implements TransactionsService {
    private void updateTenantDetailsAfterTransaction(Tenant tenant, Double amount) {
        tenant.setRemainingRent(tenant.getRemainingRent() - amount);
        if(tenant.getRemainingRent() <= 0) {
-           tenant.setStatus(RentStatus.PAID);
+           tenant.setRentStatus(RentStatus.PAID);
        } else {
-           tenant.setStatus(RentStatus.DUE);
+           tenant.setRentStatus(RentStatus.DUE);
        }
 
        tenantRepository.save(tenant);
