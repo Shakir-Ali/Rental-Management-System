@@ -1,9 +1,9 @@
-package com.shakirali.rental.services.impl;
+package com.shakirali.remintenant.services.impl;
 
-import com.shakirali.rental.beans.TenantStatus;
-import com.shakirali.rental.entity.Tenant;
-import com.shakirali.rental.repository.TenantRepository;
-import com.shakirali.rental.services.TenantService;
+import com.shakirali.remintenant.beans.TenantStatus;
+import com.shakirali.remintenant.entity.Tenant;
+import com.shakirali.remintenant.repository.TenantRepository;
+import com.shakirali.remintenant.services.TenantService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

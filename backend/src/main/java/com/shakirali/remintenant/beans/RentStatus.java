@@ -1,4 +1,4 @@
-package com.shakirali.rental.beans;
+package com.shakirali.remintenant.beans;
 
 public enum RentStatus {
     PAID,

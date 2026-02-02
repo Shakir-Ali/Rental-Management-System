@@ -1,6 +1,6 @@
-package com.shakirali.rental.repository;
+package com.shakirali.remintenant.repository;
 
-import com.shakirali.rental.entity.Transactions;
+import com.shakirali.remintenant.entity.Transactions;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,8 @@
-package com.shakirali.rental.entity;
+package com.shakirali.remintenant.entity;
 
-import com.shakirali.rental.beans.Properties;
-import com.shakirali.rental.beans.RentStatus;
-import com.shakirali.rental.beans.TenantStatus;
+import com.shakirali.remintenant.beans.Properties;
+import com.shakirali.remintenant.beans.RentStatus;
+import com.shakirali.remintenant.beans.TenantStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

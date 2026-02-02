@@ -1,12 +1,10 @@
-package com.shakirali.rental.entity;
+package com.shakirali.remintenant.entity;
 
-import com.shakirali.rental.beans.Properties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 @Getter
 @Setter

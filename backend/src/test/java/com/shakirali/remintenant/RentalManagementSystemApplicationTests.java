@@ -1,6 +1,5 @@
-package com.shakirali.rental;
+package com.shakirali.remintenant;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
