@@ -2,6 +2,7 @@ package com.shakirali.rental.entity;
 
 import com.shakirali.rental.beans.Properties;
 import com.shakirali.rental.beans.RentStatus;
+import com.shakirali.rental.beans.TenantStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,7 +21,9 @@ public class Tenant {
     @Enumerated(EnumType.STRING)
     private Properties property;
     @Enumerated(EnumType.STRING)
-    private RentStatus status;
+    private RentStatus rentStatus;
+    @Enumerated(EnumType.STRING)
+    private TenantStatus tenantStatus;
     private String notes;
 
     private LocalDate dateOfStart;
