@@ -17,7 +17,7 @@ public class WhatsAppNotificationServiceImpl implements NotificationService {
     @Override
     public void sendMessage(String message, String mobileNo) {
         Message.creator(
-                new PhoneNumber("whatsapp:+" + mobileNo),
+                new PhoneNumber("whatsapp:+91" + mobileNo),
                 new PhoneNumber(from),
                 message
         ).create();

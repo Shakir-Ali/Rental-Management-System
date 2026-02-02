@@ -21,9 +21,9 @@ public class NotificationController {
     WhatsAppNotificationServiceImpl notificationService;
 
     @GetMapping(value = "/sendNotification")
-    public ResponseEntity<String> testSendNotification() {
-        notificationService.sendMessage("Hello", "1234567890");
-        return ResponseEntity.status(HttpStatus.OK).build();
+    public String testSendNotification() {
+        notificationService.sendMessage("Hello, My WhatsApp Service is configured", "7690078185");
+        return "Sent";
     }
 
 }
