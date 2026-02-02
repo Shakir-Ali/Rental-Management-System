@@ -48,4 +48,4 @@ This project is designed to solve a real-world problem by reducing manual follow
 
 ## Author
 
-Shakir Ali Sayed
+Shakir Ali
