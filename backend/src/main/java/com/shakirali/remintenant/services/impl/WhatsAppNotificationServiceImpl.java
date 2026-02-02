@@ -1,6 +1,6 @@
-package com.shakirali.rental.services.impl;
+package com.shakirali.remintenant.services.impl;
 
-import com.shakirali.rental.services.NotificationService;
+import com.shakirali.remintenant.services.NotificationService;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 import lombok.extern.slf4j.Slf4j;

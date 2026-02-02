@@ -1,16 +1,14 @@
-package com.shakirali.rental.scheduler;
+package com.shakirali.remintenant.scheduler;
 
-import com.shakirali.rental.entity.Tenant;
-import com.shakirali.rental.repository.TenantRepository;
-import com.shakirali.rental.services.NotificationService;
+import com.shakirali.remintenant.entity.Tenant;
+import com.shakirali.remintenant.repository.TenantRepository;
+import com.shakirali.remintenant.services.NotificationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Component

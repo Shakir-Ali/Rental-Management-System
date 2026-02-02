@@ -1,4 +1,4 @@
-package com.shakirali.rental;
+package com.shakirali.remintenant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

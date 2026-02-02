@@ -1,11 +1,11 @@
-package com.shakirali.rental.services.impl;
+package com.shakirali.remintenant.services.impl;
 
-import com.shakirali.rental.beans.RentStatus;
-import com.shakirali.rental.entity.Tenant;
-import com.shakirali.rental.entity.Transactions;
-import com.shakirali.rental.repository.TenantRepository;
-import com.shakirali.rental.repository.TransactionsRepository;
-import com.shakirali.rental.services.TransactionsService;
+import com.shakirali.remintenant.beans.RentStatus;
+import com.shakirali.remintenant.entity.Tenant;
+import com.shakirali.remintenant.entity.Transactions;
+import com.shakirali.remintenant.repository.TenantRepository;
+import com.shakirali.remintenant.repository.TransactionsRepository;
+import com.shakirali.remintenant.services.TransactionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

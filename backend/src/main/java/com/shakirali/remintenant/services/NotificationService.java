@@ -1,4 +1,4 @@
-package com.shakirali.rental.services;
+package com.shakirali.remintenant.services;
 
 public interface NotificationService {
 

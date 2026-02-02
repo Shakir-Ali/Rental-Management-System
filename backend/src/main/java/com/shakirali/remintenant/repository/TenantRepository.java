@@ -1,8 +1,8 @@
-package com.shakirali.rental.repository;
+package com.shakirali.remintenant.repository;
 
-import com.shakirali.rental.beans.TenantStatus;
-import com.shakirali.rental.entity.Tenant;
-import com.shakirali.rental.entity.TenantId;
+import com.shakirali.remintenant.beans.TenantStatus;
+import com.shakirali.remintenant.entity.Tenant;
+import com.shakirali.remintenant.entity.TenantId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

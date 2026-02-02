@@ -1,6 +1,6 @@
-package com.shakirali.rental.services;
+package com.shakirali.remintenant.services;
 
-import com.shakirali.rental.entity.Tenant;
+import com.shakirali.remintenant.entity.Tenant;
 
 import java.util.List;
 

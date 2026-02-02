@@ -1,10 +1,10 @@
-package com.shakirali.rental.controller;
+package com.shakirali.remintenant.controller;
 
-import com.shakirali.rental.beans.Properties;
-import com.shakirali.rental.beans.RentStatus;
-import com.shakirali.rental.entity.Tenant;
-import com.shakirali.rental.entity.TenantId;
-import com.shakirali.rental.services.TenantService;
+import com.shakirali.remintenant.beans.Properties;
+import com.shakirali.remintenant.beans.RentStatus;
+import com.shakirali.remintenant.entity.Tenant;
+import com.shakirali.remintenant.entity.TenantId;
+import com.shakirali.remintenant.services.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
